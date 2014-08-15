@@ -14,8 +14,7 @@ Pod::Spec.new do |s|
   s.ios.deployment_target = "5.0"
   s.source       = { :git => "https://github.com/kaich/CKNearby.git", :tag => "0.0.1" }
   s.source_files  ="CKNearby/*.{h,m}"
-  s.exclude_files = "Classes/Exclude"
-  s.public_header_files = "Classes/**/*.h"
+  s.public_header_files = "CKNearby/*.h"
   s.dependency "CocoaHTTPServer"
 
 end
