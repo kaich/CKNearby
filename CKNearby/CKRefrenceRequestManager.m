@@ -28,7 +28,7 @@
         
         NSString * code =[jsonDic objectForKey:@"resultCode"];
         
-        if([code intValue]==1)
+        if([code integerValue]==1)
         {
             NSMutableArray * jsonAry=[jsonDic objectForKey:@"body"];
             for (NSDictionary * emDic in jsonAry) {
@@ -42,7 +42,7 @@
             if(self.completeBlock)
                 self.completeBlock(results);
         }
-        else if([code intValue]==0)
+        else if([code integerValue]==0)
         {
             NSString * result=[jsonDic objectForKey:@"result"];
             if(self.failedBlock)

@@ -113,7 +113,7 @@
     return self.nearbyApps.count;
 }
 
--(float) tableView:(UITableView *)tableView heightForRowAtIndexPath:(NSIndexPath *)indexPath
+-(CGFloat) tableView:(UITableView *)tableView heightForRowAtIndexPath:(NSIndexPath *)indexPath
 {
     return [CKDownloadFinishedTableViewCell getHeight];
 }
@@ -143,8 +143,8 @@
     
     
     cell.lblTitle.text=model.title;
-    cell.lblDownloadInfo.text=[NSString stringWithFormat:@"版本%@|%.1fM|%@",model.fileVersion,[model.totalCotentSize floatValue],model.downloadDate];
-    [cell.ivImage setImageWithURL:URL(model.imgURLString) placeholderImage:[UIImage imageNamed:@"Placeholder_iPhone"]];
+    cell.lblDownloadInfo.text=[NSString stringWithFormat:@"版本%@|%.1fM|%@",model.fileVersion,B_TO_M(model.totalCotentSize),model.downloadDate];
+    [cell.ivImage sd_setImageWithURL:URL(model.imgURLString) placeholderImage:[UIImage imageNamed:@"Placeholder_iPhone"]];
     
     return  cell;
 }

@@ -23,7 +23,7 @@
 
 @interface CKDownloadHTTPConnection()
 {
-    __block  int clickButtonState;
+    __block  NSInteger clickButtonState;
 }
 @end
 

@@ -93,7 +93,7 @@
         NSString * addressString=[NSString stringWithCString:inet_ntoa(socketAddress->sin_addr) encoding:NSUTF8StringEncoding];
        
         
-        socketString = [NSString stringWithFormat: @"解析结果:%@   %s:%d", sender.name, inet_ntoa(socketAddress->sin_addr), sender.port];
+        socketString = [NSString stringWithFormat: @"解析结果:%@   %s:%ld", sender.name, inet_ntoa(socketAddress->sin_addr), (long)sender.port];
         
         if(self.browseNewServiceBlock)
             self.browseNewServiceBlock(sender,addressString);
